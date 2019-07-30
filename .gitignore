@@ -1,3 +1,8 @@
+# オリジナル
+slackbot_settings.py
+
+# 以下は、Python用のgitignoreテンプレート
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
