@@ -1,35 +1,8 @@
 from slackbot.bot import respond_to
 import random
-import math
 import json
 import sys
 import urllib
-from service.calc_price import CalcPrice
-from service.free_list import FreeList
-# from service import free_list.FreeList
-
-@respond_to('おみくじ')
-def omikuji(message):
-    message.reply(random.choice(['大吉', '吉', '中吉', '小吉', '末吉', '凶', '大凶']))
-
-@respond_to('酒')
-def roulette_alcohol(message):
-    message.reply(random.choice(['ビール', 'ワイン', '日本酒', '焼酎', 'ウイスキー']))
-
-# @respond_to(r'^omikuji|omi|okj|list add (\S*) (\S*)')
-def add_omikuji_list(message, list_name, item_name):
-    FreeList.add(list_name, item_name)
-    message.reply(list_name + "に" + item_name + "を追加しました。")
-
-# @respond_to(r'^omikuji|omi|okj|list showall')
-def show_omikuji_list(message):
-    omikuji_list = FreeList.read_header()
-    message.reply("```" + str(omikuji_list) + "```")
-
-@respond_to(r'^omikuji|omi|okj|list show (\S*)')
-def show_omikuji(message, list_name):
-    omikuji = FreeList.read_article(list_name)
-    message.reply("```" + str(omikuji) + "```")
 
 @respond_to('電車遅れてる？')
 def train(message):
