@@ -1,5 +1,13 @@
-# オリジナル
+### オリジナル
+# slackbot設定ファイル
 slackbot_settings.py
+
+# 自分用memo
+memo.txt
+
+# notebookデバッグ用
+*.ipynb
+
 
 # 以下は、Python用のgitignoreテンプレート
 
